@@ -45,13 +45,13 @@ class MapViewController: UIViewController,BMKMapViewDelegate,BMKLocationServiceD
         annotation.title = "这里是我"
         
         mapView.addAnnotation(annotation)
-  
+  顶顶顶顶
     self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
     self.navigationController?.navigationBar.shadowImage = UIImage()
     self.navigationController?.navigationBar.isHidden = true
         var btn = UIButton(frame: CGRect(x: 10, y: 10, width: 100, height: 100))
         btn.setTitle("xiangq", for: .normal)
-        self.view.addSubview(btn)n
+        self.view.addSubview(btn)
     }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
