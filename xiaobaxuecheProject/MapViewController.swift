@@ -45,7 +45,7 @@ class MapViewController: UIViewController,BMKMapViewDelegate,BMKLocationServiceD
         annotation.title = "这里是我"
         
         mapView.addAnnotation(annotation)
-  顶顶顶顶
+    print("github")
     self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
     self.navigationController?.navigationBar.shadowImage = UIImage()
     self.navigationController?.navigationBar.isHidden = true
