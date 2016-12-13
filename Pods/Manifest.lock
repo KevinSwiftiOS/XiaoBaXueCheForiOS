@@ -1,0 +1,15 @@
+PODS:
+  - BaiduMapKit (3.1.0)
+  - FDFullscreenPopGesture (1.1)
+
+DEPENDENCIES:
+  - BaiduMapKit
+  - FDFullscreenPopGesture (= 1.1)
+
+SPEC CHECKSUMS:
+  BaiduMapKit: 4cfaedb118cff7e157e9771859a4bf65a261b2a1
+  FDFullscreenPopGesture: a8a620179e3d9c40e8e00256dcee1c1a27c6d0f0
+
+PODFILE CHECKSUM: 5ad95490dae3c9e5051eb4c2a39f226a3c0a63fe
+
+COCOAPODS: 1.1.1

@@ -1,0 +1,6 @@
+framework module Pods_xiaobaxuecheProject {
+  umbrella header "Pods-xiaobaxuecheProject-umbrella.h"
+
+  export *
+  module * { export * }
+}
