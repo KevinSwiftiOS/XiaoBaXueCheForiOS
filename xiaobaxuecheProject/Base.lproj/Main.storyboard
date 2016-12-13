@@ -21,18 +21,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tLT-OO-Gqe" customClass="BMKMapView">
-                                <rect key="frame" x="0.0" y="64" width="320" height="212"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tLT-OO-Gqe" customClass="BMKMapView">
+                                <rect key="frame" x="0.0" y="64" width="320" height="402"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OoX-0t-TD1">
+                                <rect key="frame" x="155" y="484" width="141" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="C2自动挡" backgroundImage="lesson_appoint_btn">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ebp-EX-Fbi">
+                                <rect key="frame" x="16" y="482" width="131" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="C1手动挡" backgroundImage="coach_details_btn">
+                                    <color key="titleColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="tLT-OO-Gqe" secondAttribute="trailing" id="35n-Ka-3o0"/>
-                            <constraint firstItem="tLT-OO-Gqe" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="IrR-Fk-nNI"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="tLT-OO-Gqe" secondAttribute="bottom" id="bwu-QE-HRx"/>
-                            <constraint firstItem="tLT-OO-Gqe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="nvv-j6-4QQ"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="fcb-mr-nCN"/>
                     <connections>
@@ -41,7 +51,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1312.5" y="-499.64788732394368"/>
+            <point key="canvasLocation" x="1217" y="-528"/>
         </scene>
         <!--小巴服务-->
         <scene sceneID="w15-UC-fe9">
@@ -88,9 +98,24 @@
                     <view key="view" contentMode="scaleToFill" id="JnR-EU-krZ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P4L-nf-VNb" customClass="BMKMapView">
+                                <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="P4L-nf-VNb" secondAttribute="trailing" id="cM5-4Z-y7l"/>
+                            <constraint firstItem="8gO-I2-rMH" firstAttribute="top" secondItem="P4L-nf-VNb" secondAttribute="bottom" id="eU2-Pb-8eW"/>
+                            <constraint firstItem="P4L-nf-VNb" firstAttribute="top" secondItem="OWd-e9-ga9" secondAttribute="bottom" id="w5w-KR-ELd"/>
+                            <constraint firstItem="P4L-nf-VNb" firstAttribute="leading" secondItem="JnR-EU-krZ" secondAttribute="leading" id="zfO-5n-635"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="N0Y-je-K5h"/>
+                    <connections>
+                        <outlet property="mapView" destination="P4L-nf-VNb" id="FYF-JK-o3b"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MUR-ww-IUO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -155,7 +180,9 @@
         <scene sceneID="nIv-7N-26t">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NhV-ch-szE" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="学车" id="hod-aW-skt"/>
+                    <tabBarItem key="tabBarItem" title="学车" selectedImage="ic_learn_tab" id="hod-aW-skt">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="5"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Zly-N2-UEe">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -174,7 +201,7 @@
         <scene sceneID="rxg-bL-iN8">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="w3d-j5-opv" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="陪驾" id="KCp-MX-9Oi"/>
+                    <tabBarItem key="tabBarItem" title="陪驾" image="ic_peijia_tab" id="KCp-MX-9Oi"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="lWH-wc-vwm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -193,7 +220,7 @@
         <scene sceneID="uB8-sy-Ux1">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="SVb-uM-kUe" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="服务" id="QxF-bI-GJy"/>
+                    <tabBarItem key="tabBarItem" title="服务" image="ic_serve_tab" id="QxF-bI-GJy"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="qit-XP-uhL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -212,7 +239,7 @@
         <scene sceneID="WJq-dl-eAK">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="N3a-dV-5QS" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="题库" id="6O1-ho-rtK"/>
+                    <tabBarItem key="tabBarItem" title="题库" image="ic_exercise_tab" id="6O1-ho-rtK"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="5hk-if-Na6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -228,4 +255,12 @@
             <point key="canvasLocation" x="-2137" y="932"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="coach_details_btn" width="143" height="35"/>
+        <image name="ic_exercise_tab" width="44" height="44"/>
+        <image name="ic_learn_tab" width="44" height="44"/>
+        <image name="ic_peijia_tab" width="44" height="44"/>
+        <image name="ic_serve_tab" width="44" height="44"/>
+        <image name="lesson_appoint_btn" width="143" height="35"/>
+    </resources>
 </document>

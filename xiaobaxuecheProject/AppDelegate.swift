@@ -23,7 +23,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if(ret == false){
             print("加载百度地图失败")
         }
-        
         return true
     }
 

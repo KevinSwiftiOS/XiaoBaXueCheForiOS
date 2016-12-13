@@ -9,6 +9,9 @@
 import UIKit
 
 class MapViewController: UIViewController,BMKMapViewDelegate,BMKLocationServiceDelegate {
+    //筛选和列表的btn
+    var searchBtn = UIButton()
+    var listBtn = UIButton()
     //地图
     var locationService = BMKLocationService()
     @IBOutlet weak var mapView:BMKMapView!
@@ -18,11 +21,9 @@ class MapViewController: UIViewController,BMKMapViewDelegate,BMKLocationServiceD
         super.viewDidLoad()
         mapView.delegate = self
         //添加圆形的覆盖物
-         locationService.allowsBackgroundLocationUpdates = true
-    
-
- 
-        //开始定位
+       //  locationService.allowsBackgroundLocationUpdates = true
+    searchBtn = UIButton(frame: CGRect(x: SCREEN_WIDTH - 50 - 50 - 20, y: 20, width: 50, height: 50))
+                //开始定位
         locationService.startUserLocationService()
         mapView.showsUserLocation = false
         mapView.userTrackingMode = BMKUserTrackingModeNone
@@ -45,21 +46,26 @@ class MapViewController: UIViewController,BMKMapViewDelegate,BMKLocationServiceD
         annotation.title = "这里是我"
         
         mapView.addAnnotation(annotation)
-    print("github")
-    self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-    self.navigationController?.navigationBar.shadowImage = UIImage()
+  
+   self.tabBarController?.tabBar.isHidden = false
     self.navigationController?.navigationBar.isHidden = true
-        var btn = UIButton(frame: CGRect(x: 10, y: 10, width: 100, height: 100))
-        btn.setTitle("xiangq", for: .normal)
-        self.view.addSubview(btn)
+        listBtn = UIButton(frame:CGRect(x: SCREEN_WIDTH - 50  - 10, y: 20, width: 50, height: 50))
+        searchBtn.setBackgroundImage(UIImage(named:"list_search_btn"), for: .normal)
+        listBtn.setBackgroundImage(UIImage(named:"list_btn"), for: .normal)
+        searchBtn.addTarget(self, action: #selector(MapViewController.search), for: .touchUpInside)
+        listBtn.addTarget(self, action: #selector(MapViewController.listShow), for: .touchUpInside)
+        self.view.addSubview(searchBtn)
+        self.view.addSubview(listBtn)
+      self.navigationController?.navigationBar.isHidden = true
+        
     }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         locationService.delegate = self
         mapView.delegate = nil
         mapView.viewWillDisappear()
-        self.navigationController?.navigationBar.setBackgroundImage(nil, for: .default)
-        self.navigationController?.navigationBar.shadowImage = nil
+      self.navigationController?.navigationBar.isHidden = false
+        
     }
     //自定义精度图
     func customLocationAccuracyCircle(){
@@ -145,5 +151,15 @@ class MapViewController: UIViewController,BMKMapViewDelegate,BMKLocationServiceD
         coachView.removeFromSuperview()
          self.tabBarController?.tabBar.isHidden = false
     }
-  
+  //搜索列表
+    func search() {
+        
+    }
+    //教练列表
+    func listShow(){
+        let learnCarSb = UIStoryboard(name: "LearnCar", bundle: nil)
+        let coachListVC = learnCarSb.instantiateViewController(withIdentifier: "CoachListVC") as! CoachListViewController
+        coachListVC.title = "教练列表"
+        self.navigationController?.pushViewController(coachListVC, animated: true)
+    }
 }

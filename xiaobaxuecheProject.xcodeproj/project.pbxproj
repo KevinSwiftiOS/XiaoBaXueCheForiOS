@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B3FE77A1DFF8E84001D2EF5 /* LearnCar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B3FE7791DFF8E84001D2EF5 /* LearnCar.storyboard */; };
+		5B3FE77F1DFF8EC9001D2EF5 /* CoachListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3FE77E1DFF8EC9001D2EF5 /* CoachListViewController.swift */; };
+		5B3FE7811DFF9071001D2EF5 /* CoachDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3FE7801DFF9071001D2EF5 /* CoachDetailTableViewCell.swift */; };
 		5B6ECD821DFE8CD600436934 /* CityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6ECD811DFE8CD600436934 /* CityViewController.swift */; };
 		5B6ECD841DFE8FA500436934 /* CusCityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6ECD831DFE8FA500436934 /* CusCityTableViewCell.swift */; };
 		5B6ECD861DFE8FF900436934 /* Service.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B6ECD851DFE8FF900436934 /* Service.storyboard */; };
@@ -14,7 +17,6 @@
 		5BBAC0191DFD3DAD00CECD8B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBAC0181DFD3DAD00CECD8B /* AppDelegate.swift */; };
 		5BBAC01E1DFD3DAD00CECD8B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BBAC01C1DFD3DAD00CECD8B /* Main.storyboard */; };
 		5BBAC0201DFD3DAD00CECD8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BBAC01F1DFD3DAD00CECD8B /* Assets.xcassets */; };
-		5BBAC0231DFD3DAD00CECD8B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BBAC0211DFD3DAD00CECD8B /* LaunchScreen.storyboard */; };
 		5BBAC02E1DFD3E0300CECD8B /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 5BBAC02D1DFD3E0300CECD8B /* Podfile */; };
 		5BBF8E351DFE6EEC0067CE16 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBF8E341DFE6EEC0067CE16 /* MapViewController.swift */; };
 		5BBF8E3F1DFE6F8E0067CE16 /* QusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBF8E3E1DFE6F8E0067CE16 /* QusViewController.swift */; };
@@ -26,6 +28,9 @@
 
 /* Begin PBXFileReference section */
 		1676416AE51D6C1A3E03479C /* Pods_xiaobaxuecheProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_xiaobaxuecheProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B3FE7791DFF8E84001D2EF5 /* LearnCar.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LearnCar.storyboard; sourceTree = "<group>"; };
+		5B3FE77E1DFF8EC9001D2EF5 /* CoachListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoachListViewController.swift; sourceTree = "<group>"; };
+		5B3FE7801DFF9071001D2EF5 /* CoachDetailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoachDetailTableViewCell.swift; sourceTree = "<group>"; };
 		5B6ECD811DFE8CD600436934 /* CityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityViewController.swift; sourceTree = "<group>"; };
 		5B6ECD831DFE8FA500436934 /* CusCityTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CusCityTableViewCell.swift; sourceTree = "<group>"; };
 		5B6ECD851DFE8FF900436934 /* Service.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Service.storyboard; sourceTree = "<group>"; };
@@ -34,7 +39,6 @@
 		5BBAC0181DFD3DAD00CECD8B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5BBAC01D1DFD3DAD00CECD8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5BBAC01F1DFD3DAD00CECD8B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		5BBAC0221DFD3DAD00CECD8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5BBAC0241DFD3DAD00CECD8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5BBAC02A1DFD3DB800CECD8B /* xiaobaxuecheProject-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "xiaobaxuecheProject-Bridging-Header.h"; sourceTree = "<group>"; };
 		5BBAC02D1DFD3E0300CECD8B /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -62,6 +66,8 @@
 		5B07E8041DFEC82B008969F3 /* V */ = {
 			isa = PBXGroup;
 			children = (
+				5B3FE7791DFF8E84001D2EF5 /* LearnCar.storyboard */,
+				5B3FE7801DFF9071001D2EF5 /* CoachDetailTableViewCell.swift */,
 			);
 			name = V;
 			sourceTree = "<group>";
@@ -119,7 +125,6 @@
 				5BBAC0181DFD3DAD00CECD8B /* AppDelegate.swift */,
 				5BBAC01C1DFD3DAD00CECD8B /* Main.storyboard */,
 				5BBAC01F1DFD3DAD00CECD8B /* Assets.xcassets */,
-				5BBAC0211DFD3DAD00CECD8B /* LaunchScreen.storyboard */,
 				5BBAC0241DFD3DAD00CECD8B /* Info.plist */,
 				5BBAC02A1DFD3DB800CECD8B /* xiaobaxuecheProject-Bridging-Header.h */,
 				5BBF8E4A1DFE79710067CE16 /* config.swift */,
@@ -175,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				5BBF8E341DFE6EEC0067CE16 /* MapViewController.swift */,
+				5B3FE77E1DFF8EC9001D2EF5 /* CoachListViewController.swift */,
 			);
 			name = C;
 			sourceTree = "<group>";
@@ -277,11 +283,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5BBAC0231DFD3DAD00CECD8B /* LaunchScreen.storyboard in Resources */,
 				5B6ECD861DFE8FF900436934 /* Service.storyboard in Resources */,
 				5BBAC0201DFD3DAD00CECD8B /* Assets.xcassets in Resources */,
 				5B6ECD891DFE9AEA00436934 /* citys.plist in Resources */,
 				5BBAC02E1DFD3E0300CECD8B /* Podfile in Resources */,
+				5B3FE77A1DFF8E84001D2EF5 /* LearnCar.storyboard in Resources */,
 				5BBAC01E1DFD3DAD00CECD8B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -341,6 +347,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B3FE77F1DFF8EC9001D2EF5 /* CoachListViewController.swift in Sources */,
 				5BBF8E421DFE6FAA0067CE16 /* WithDrivingViewController.swift in Sources */,
 				5BBF8E441DFE6FBB0067CE16 /* ServiceViewController.swift in Sources */,
 				5BBF8E351DFE6EEC0067CE16 /* MapViewController.swift in Sources */,
@@ -349,6 +356,7 @@
 				5BBF8E3F1DFE6F8E0067CE16 /* QusViewController.swift in Sources */,
 				5BBAC0191DFD3DAD00CECD8B /* AppDelegate.swift in Sources */,
 				5B6ECD821DFE8CD600436934 /* CityViewController.swift in Sources */,
+				5B3FE7811DFF9071001D2EF5 /* CoachDetailTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,14 +369,6 @@
 				5BBAC01D1DFD3DAD00CECD8B /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		5BBAC0211DFD3DAD00CECD8B /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5BBAC0221DFD3DAD00CECD8B /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -470,6 +470,7 @@
 			baseConfigurationReference = 6A3245B77E2E2198610C02CF /* Pods-xiaobaxuecheProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 2W69M3457X;
 				INFOPLIST_FILE = xiaobaxuecheProject/Info.plist;
@@ -488,6 +489,7 @@
 			baseConfigurationReference = AEAF843A583B21B01BA03BAA /* Pods-xiaobaxuecheProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 2W69M3457X;
 				INFOPLIST_FILE = xiaobaxuecheProject/Info.plist;
