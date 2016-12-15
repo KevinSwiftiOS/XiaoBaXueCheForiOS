@@ -30,8 +30,7 @@ class WithDrivingViewController: UIViewController ,BMKMapViewDelegate,BMKLocatio
     }
     
     override func  viewWillAppear(_ animated: Bool) {
-        self.navigationController?.navigationBar.isHidden = true
-        self.tabBarController?.tabBar.isHidden = false
+             self.tabBarController?.tabBar.isHidden = false
         let rightBtn = UIButton(frame: CGRect(x: SCREEN_WIDTH - 50 - 10, y: 20, width: 50, height: 50))
         rightBtn.setBackgroundImage(UIImage(named:"list_btn"), for: .normal)
     self.view.addSubview(rightBtn)
@@ -92,7 +91,7 @@ class WithDrivingViewController: UIViewController ,BMKMapViewDelegate,BMKLocatio
             newView?.pinColor = UInt(BMKPinAnnotationColorPurple)
             newView?.animatesDrop = true
             newView?.tag = 0
-            newView?.addGestureRecognizer(UITapGestureRecognizer(target: self, action:#selector(MapViewController.touch)))
+//            newView?.addGestureRecognizer(UITapGestureRecognizer(target: self, action:#selector(MapViewController.touch)))
             return newView
         }
         return nil

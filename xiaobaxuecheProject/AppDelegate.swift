@@ -10,6 +10,7 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    var slide:SlideViewController?
 
     var window: UIWindow?
     var mapManager:BMKMapManager?
@@ -23,6 +24,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if(ret == false){
             print("加载百度地图失败")
         }
+        self.window = UIWindow(frame: CGRect(x: 0, y: 0, width: SCREEN_WIDTH, height: SCREEN_HEIGHT))
+          slide = SlideViewController()
+        //let nav = UINavigationController(rootViewController: slide)
+        
+        self.window?.rootViewController = slide
+        self.window?.makeKeyAndVisible()
         return true
     }
 

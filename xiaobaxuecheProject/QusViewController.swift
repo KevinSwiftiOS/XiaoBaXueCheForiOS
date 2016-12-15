@@ -21,7 +21,7 @@ class QusViewController: UIViewController,UITableViewDelegate,UITableViewDataSou
         totalArr.add(testOne)
         totalArr.add(testFour)
         self.tableView.tableFooterView = UIView()
-        self.automaticallyAdjustsScrollViewInsets = false
+      self.automaticallyAdjustsScrollViewInsets = false
         // Do any additional setup after loading the view.
     }
 

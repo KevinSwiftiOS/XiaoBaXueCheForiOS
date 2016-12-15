@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MapViewController: UIViewController,BMKMapViewDelegate,BMKLocationServiceDelegate {
+class MapViewController: UIViewController,BMKMapViewDelegate,BMKLocationServiceDelegate,CusDelegate {
     //筛选和列表的btn
     var searchBtn = UIButton()
     var listBtn = UIButton()
@@ -22,7 +22,7 @@ class MapViewController: UIViewController,BMKMapViewDelegate,BMKLocationServiceD
         mapView.delegate = self
         //添加圆形的覆盖物
        //  locationService.allowsBackgroundLocationUpdates = true
-    searchBtn = UIButton(frame: CGRect(x: SCREEN_WIDTH - 50 - 50 - 20, y: 20, width: 50, height: 50))
+    
                 //开始定位
         locationService.startUserLocationService()
         mapView.showsUserLocation = false
@@ -30,7 +30,8 @@ class MapViewController: UIViewController,BMKMapViewDelegate,BMKLocationServiceD
         mapView.showsUserLocation = true
        
        //mapView设置中心
-    
+
+   
     }
     override func didReceiveMemoryWarning() {
         
@@ -41,30 +42,41 @@ class MapViewController: UIViewController,BMKMapViewDelegate,BMKLocationServiceD
         mapView.delegate = self
         mapView.viewWillAppear()
         let coor1 = CLLocationCoordinate2DMake(30.3038950000,120.2203000000)
+        //加三个按钮
         let annotation = BMKPointAnnotation()
         annotation.coordinate = coor1
-        annotation.title = "这里是我"
-        
+        annotation.title = "这里有教练"
         mapView.addAnnotation(annotation)
-  
-   self.tabBarController?.tabBar.isHidden = false
-    self.navigationController?.navigationBar.isHidden = true
-        listBtn = UIButton(frame:CGRect(x: SCREEN_WIDTH - 50  - 10, y: 20, width: 50, height: 50))
-        searchBtn.setBackgroundImage(UIImage(named:"list_search_btn"), for: .normal)
+//        let coor2 = CLLocationCoordinate2DMake(30.50950000,121.2203000000)
+//        //加三个按钮
+//        let annotation2 = BMKPointAnnotation()
+//        annotation2.coordinate = coor2
+//        annotation2.title = "这里有教练"
+//        mapView.addAnnotation(annotation2)
+    
+        listBtn = UIButton(frame:CGRect(x: 0, y: 0, width: 43, height: 43))
+        searchBtn = UIButton(frame: CGRect(x: 0, y: 0, width: 43, height: 43))
+        searchBtn.setBackgroundImage(UIImage(named:"search_btn"), for: .normal)
         listBtn.setBackgroundImage(UIImage(named:"list_btn"), for: .normal)
+    
         searchBtn.addTarget(self, action: #selector(MapViewController.search), for: .touchUpInside)
-        listBtn.addTarget(self, action: #selector(MapViewController.listShow), for: .touchUpInside)
-        self.view.addSubview(searchBtn)
-        self.view.addSubview(listBtn)
-      self.navigationController?.navigationBar.isHidden = true
+   
         
+        
+        listBtn.addTarget(self, action: #selector(MapViewController.listShow), for: .touchUpInside)
+      
+        let rightListItem = UIBarButtonItem(customView: listBtn)
+         let rightSearchItem = UIBarButtonItem(customView: searchBtn)
+        self.navigationItem.rightBarButtonItems = [rightListItem,rightSearchItem]
+      
+         self.navigationController?.navigationBar.backgroundColor = UIColor.clear
     }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         locationService.delegate = self
         mapView.delegate = nil
         mapView.viewWillDisappear()
-      self.navigationController?.navigationBar.isHidden = false
+     
         
     }
     //自定义精度图
@@ -77,7 +89,7 @@ class MapViewController: UIViewController,BMKMapViewDelegate,BMKLocationServiceD
         }
     
     func didUpdateUserHeading(_ userLocation: BMKUserLocation!) {
-//        print("heading is \(userLocation.heading)")
+
         mapView.updateLocationData(userLocation)
         let coor = userLocation.location.coordinate
         mapView.setCenter(coor, animated: true)
@@ -90,7 +102,7 @@ class MapViewController: UIViewController,BMKMapViewDelegate,BMKLocationServiceD
      *@param userLocation 新的用户位置
      */
     func didUpdateBMKUserLocation(userLocation: BMKUserLocation!) {
-//        print("didUpdateUserLocation lat:\(userLocation.location.coordinate.latitude) lon:\(userLocation.location.coordinate.longitude)")
+
         mapView.updateLocationData(userLocation)
         let coor = userLocation.location.coordinate
         mapView.setCenter(coor, animated: true)
@@ -109,57 +121,34 @@ class MapViewController: UIViewController,BMKMapViewDelegate,BMKLocationServiceD
         return nil
     }
     func touch(sender:UITapGestureRecognizer){
-    grayView = UIView(frame: CGRect(x: 0, y: 0, width: SCREEN_WIDTH, height: SCREEN_HEIGHT - 100))
-        coachView = UIView(frame: CGRect(x: 0, y: SCREEN_HEIGHT - 100, width: SCREEN_WIDTH, height: 100))
-        grayView.addGestureRecognizer(UITapGestureRecognizer(target: self, action:#selector(MapViewController.resign)))
-        coachView.backgroundColor = UIColor.white
-        //coachView下面加东西
-        let head = UIImageView(frame: CGRect(x: 10, y: 10, width: 50, height: 50))
-        head.layer.cornerRadius = 50
-        head.layer.masksToBounds = true
-        head.image = UIImage(named: "ico_客服")
-        let nameLabel = UILabel(frame: CGRect(x: 60, y: 10, width: 100, height: 30))
-        nameLabel.text = "王"
-        let textView = UITextView(frame: CGRect(x: 10, y: 70, width: 200, height: 30))
-        textView.isEditable = false
-        textView.text = "练车地点"
-        let detailBtn = UIButton(frame: CGRect(x: 0, y: 100, width: 50, height: 30))
-        detailBtn.backgroundColor = UIColor.green
-        detailBtn.setTitle("教练详情", for: .normal)
-        detailBtn.tintColor = UIColor.white
-        let courseBtn = UIButton(frame: CGRect(x: 60, y: 100, width: 50, height: 30))
-        courseBtn.backgroundColor = UIColor.green
-        courseBtn.setTitle("课程预约", for: .normal)
-        courseBtn.tintColor = UIColor.white
-        coachView.addSubview(head)
-        coachView.addSubview(nameLabel)
-        coachView.addSubview(textView)
-        coachView.addSubview(detailBtn)
-        coachView.addSubview(courseBtn)
+        let cusAction = CusActionView(head: UIImage(named:"ico_客服")!, des: "练车地点", num: 10, name: "曹凯强",isTab:true,navigationBar:(self.navigationController?.navigationBar)!)
+        self.view.addSubview(cusAction)
+        cusAction.show()
+        cusAction.delegate = self
         
-      grayView.backgroundColor = UIColor(colorLiteralRed: 0, green: 0, blue: 0, alpha: 0.868)
-        self.view.addSubview(grayView)
-        self.view.addSubview(coachView)
-        
-        
-        
-      self.tabBarController?.tabBar.isHidden = true
-        
-          }
-    func resign(){
-    grayView.removeFromSuperview()
-        coachView.removeFromSuperview()
-         self.tabBarController?.tabBar.isHidden = false
-    }
-  //搜索列表
+}
+    //搜索列表
     func search() {
-        
+        let sb = UIStoryboard(name: "LearnCar", bundle: nil)
+        let searchVC = sb.instantiateViewController(withIdentifier: "SearchVC")
+        as! SearchViewController
+        self.present(searchVC, animated: true, completion: nil)
     }
     //教练列表
     func listShow(){
-        let learnCarSb = UIStoryboard(name: "LearnCar", bundle: nil)
+        //tabBar消失
+           let learnCarSb = UIStoryboard(name: "LearnCar", bundle: nil)
         let coachListVC = learnCarSb.instantiateViewController(withIdentifier: "CoachListVC") as! CoachListViewController
         coachListVC.title = "教练列表"
         self.navigationController?.pushViewController(coachListVC, animated: true)
+    }
+    @IBAction func tap(sender:UIButton){
+
+          }
+    func detail(){
+       
+    }
+    func yuyue() {
+      
     }
 }

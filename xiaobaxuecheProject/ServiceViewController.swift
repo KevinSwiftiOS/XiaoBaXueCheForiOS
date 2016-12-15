@@ -95,6 +95,6 @@ cell?.textLabel?.text = self.titles[indexPath.section]
         localBtn.setTitle(value, for: .normal)
     }
     override func viewWillAppear(_ animated: Bool) {
-          self.tabBarController?.tabBar.isHidden = false
+         
     }
 }

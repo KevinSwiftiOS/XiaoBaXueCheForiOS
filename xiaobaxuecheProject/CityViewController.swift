@@ -18,6 +18,7 @@ class CityViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     var sel = ""
     let titles = ["已选城市","定位城市","热门城市","所有城市"]
     var delegate:Send?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 self.tableView.delegate = self
@@ -25,7 +26,7 @@ self.tableView.dataSource = self
         self.tableView.tableFooterView = UIView()
         self.automaticallyAdjustsScrollViewInsets = false
         self.title = "选择城市"
-        self.tabBarController?.tabBar.isHidden = true
+     
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
         
@@ -84,7 +85,7 @@ self.tableView.dataSource = self
             if cell == nil {
                 cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: identifer)
             }
-            cell?.textLabel?.text = self.cities[indexPath.row] as! String
+            cell?.textLabel?.text = self.cities[indexPath.row] as? String
             return cell!
 
         default:
@@ -98,12 +99,13 @@ self.tableView.dataSource = self
             
         case 0:break
         case 1: self.delegate?.send(value: self.loca)
-            self.navigationController?.popViewController(animated: true)
+        _ = navigationController?.popViewController(animated: true)
+
         case 2:break
         case 3:
             let sel = self.cities[indexPath.row]
             self.delegate?.send(value: sel as! String)
-            self.navigationController?.popViewController(animated: true)
+            _ = navigationController?.popViewController(animated: true)
             
             
         default:
@@ -114,7 +116,15 @@ self.tableView.dataSource = self
     func selCity(sender:UIButton){
        
         self.delegate?.send(value: (sender.titleLabel?.text)!)
-       self.navigationController?.popViewController(animated: true)
+        _ = navigationController?.popViewController(animated: true)
+
     }
-    
+    override func viewWillAppear(_ animated: Bool) {
+        let app = UIApplication.shared.delegate  as! AppDelegate
+        app.slide?.tabBar.myView?.isHidden = true
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        let app = UIApplication.shared.delegate  as! AppDelegate
+        app.slide?.tabBar.myView?.isHidden = false
+    }
 }
