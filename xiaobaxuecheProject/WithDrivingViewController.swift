@@ -31,7 +31,7 @@ class WithDrivingViewController: UIViewController ,BMKMapViewDelegate,BMKLocatio
     
     override func  viewWillAppear(_ animated: Bool) {
              self.tabBarController?.tabBar.isHidden = false
-        let rightBtn = UIButton(frame: CGRect(x: SCREEN_WIDTH - 50 - 10, y: 20, width: 50, height: 50))
+        let rightBtn = UIButton(frame: CGRect(x: SCREEN_WIDTH - 50 - 10, y: 15, width: 50, height: 50))
         rightBtn.setBackgroundImage(UIImage(named:"list_btn"), for: .normal)
     self.view.addSubview(rightBtn)
         
@@ -45,7 +45,8 @@ class WithDrivingViewController: UIViewController ,BMKMapViewDelegate,BMKLocatio
         annotation.title = "这里是我"
         
         mapView.addAnnotation(annotation)
-
+ 
+     self.navigationController?.navigationBar.isHidden = true
     }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)

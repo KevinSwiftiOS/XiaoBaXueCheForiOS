@@ -10,6 +10,7 @@
 		5B3FE77A1DFF8E84001D2EF5 /* LearnCar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B3FE7791DFF8E84001D2EF5 /* LearnCar.storyboard */; };
 		5B3FE77F1DFF8EC9001D2EF5 /* CoachListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3FE77E1DFF8EC9001D2EF5 /* CoachListViewController.swift */; };
 		5B3FE7811DFF9071001D2EF5 /* CoachDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3FE7801DFF9071001D2EF5 /* CoachDetailTableViewCell.swift */; };
+		5B65A0B71E02C11A009E269E /* HalfWaySpringAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B65A0B61E02C11A009E269E /* HalfWaySpringAnimator.swift */; };
 		5B6ECD821DFE8CD600436934 /* CityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6ECD811DFE8CD600436934 /* CityViewController.swift */; };
 		5B6ECD841DFE8FA500436934 /* CusCityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6ECD831DFE8FA500436934 /* CusCityTableViewCell.swift */; };
 		5B6ECD861DFE8FF900436934 /* Service.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B6ECD851DFE8FF900436934 /* Service.storyboard */; };
@@ -57,6 +58,7 @@
 		5B3FE7791DFF8E84001D2EF5 /* LearnCar.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LearnCar.storyboard; sourceTree = "<group>"; };
 		5B3FE77E1DFF8EC9001D2EF5 /* CoachListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoachListViewController.swift; sourceTree = "<group>"; };
 		5B3FE7801DFF9071001D2EF5 /* CoachDetailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoachDetailTableViewCell.swift; sourceTree = "<group>"; };
+		5B65A0B61E02C11A009E269E /* HalfWaySpringAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HalfWaySpringAnimator.swift; sourceTree = "<group>"; };
 		5B6ECD811DFE8CD600436934 /* CityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityViewController.swift; sourceTree = "<group>"; };
 		5B6ECD831DFE8FA500436934 /* CusCityTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CusCityTableViewCell.swift; sourceTree = "<group>"; };
 		5B6ECD851DFE8FF900436934 /* Service.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Service.storyboard; sourceTree = "<group>"; };
@@ -156,7 +158,6 @@
 		5B6ECD871DFE9AD200436934 /* M */ = {
 			isa = PBXGroup;
 			children = (
-				5B6ECD7E1DFE7D3600436934 /* V */,
 				5B6ECD881DFE9AE900436934 /* citys.plist */,
 			);
 			name = M;
@@ -175,6 +176,7 @@
 				5B9430FA1E001482000C6646 /* CDTabBarButton.swift */,
 				5B9430FC1E001554000C6646 /* CDTabbarViewController.swift */,
 				5BC7207D1E016D5000B16559 /* SlideViewController.swift */,
+				5B65A0B61E02C11A009E269E /* HalfWaySpringAnimator.swift */,
 			);
 			name = Main;
 			sourceTree = "<group>";
@@ -239,6 +241,7 @@
 		5BBF8E391DFE6F310067CE16 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				5B6ECD7E1DFE7D3600436934 /* V */,
 				5B6ECD871DFE9AD200436934 /* M */,
 				5BBF8E401DFE6F940067CE16 /* C */,
 			);
@@ -581,6 +584,7 @@
 				5BC720361E0130EF00B16559 /* MJRefreshGifHeader.m in Sources */,
 				5BBAC0191DFD3DAD00CECD8B /* AppDelegate.swift in Sources */,
 				5BC720421E01310800B16559 /* MJRefreshBackNormalFooter.m in Sources */,
+				5B65A0B71E02C11A009E269E /* HalfWaySpringAnimator.swift in Sources */,
 				5BC7204C1E01311500B16559 /* MJRefreshAutoStateFooter.m in Sources */,
 				5B6ECD821DFE8CD600436934 /* CityViewController.swift in Sources */,
 				5BC7202A1E0130AC00B16559 /* UIView+MJExtension.m in Sources */,

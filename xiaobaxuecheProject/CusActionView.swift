@@ -33,10 +33,25 @@ class CusActionView: UIView{
         self.head.image = head
        self.name = UILabel(frame: CGRect(x: 65, y: 10, width: 100, height: 20))
         self.name.text = name
-        let starImageView = UIImageView(frame:CGRect(x: 65, y: 35, width: 30, height: 30))
+        let starImageView = UIImageView(frame:CGRect(x: 65, y: 35, width: 20, height: 20))
         starImageView.image = UIImage(named: "coach_star_full")
-        self.yuyueNum = UILabel(frame: CGRect(x: 100, y: 35, width: 200, height: 30))
+          let starImageView1 = UIImageView(frame:CGRect(x: 90, y: 35, width: 20, height: 20))
+        
+          let starImageView2 = UIImageView(frame:CGRect(x: 115, y: 35, width: 20, height: 20))
+          let starImageView3 = UIImageView(frame:CGRect(x: 140, y: 35, width: 20, height: 20))
+          let starImageView4 = UIImageView(frame:CGRect(x: 165, y: 35, width: 20, height: 20))
+          starImageView1.image = UIImage(named: "coach_star_full")
+          starImageView2.image = UIImage(named: "coach_star_full")
+          starImageView3.image = UIImage(named: "coach_star_full")
+          starImageView4.image = UIImage(named: "coach_star_full")
+        
+        self.yuyueNum = UILabel(frame: CGRect(x: 190, y: 35, width: 200, height: 30))
         self.yuyueNum.text = "预约次数:" + "\(num)"
+      
+        
+        self.yuyueNum.font = UIFont.systemFont(ofSize: 12)
+        
+        
         self.des = UILabel(frame: CGRect(x: 10, y: 60, width: SCREEN_WIDTH - 10, height: 30))
        self.des.text = des
         self.des.textColor = UIColor.black
@@ -57,6 +72,12 @@ class CusActionView: UIView{
         bottomView?.addSubview(self.detailBtn)
         bottomView?.addSubview(yuyeBtn)
         bottomView?.addSubview(starImageView)
+        bottomView?.addSubview(starImageView1)
+        bottomView?.addSubview(starImageView2)
+        bottomView?.addSubview(starImageView3)
+        bottomView?.addSubview(starImageView4)
+        
+
       self.addSubview(self.bottomView!)
         
     }

@@ -54,8 +54,8 @@ class MapViewController: UIViewController,BMKMapViewDelegate,BMKLocationServiceD
 //        annotation2.title = "这里有教练"
 //        mapView.addAnnotation(annotation2)
     
-        listBtn = UIButton(frame:CGRect(x: 0, y: 0, width: 43, height: 43))
-        searchBtn = UIButton(frame: CGRect(x: 0, y: 0, width: 43, height: 43))
+        listBtn = UIButton(frame:CGRect(x: SCREEN_WIDTH - 50 - 10, y: 15, width: 50, height: 50))
+        searchBtn = UIButton(frame: CGRect(x: SCREEN_WIDTH - 100 - 20, y: 15, width: 50, height: 50))
         searchBtn.setBackgroundImage(UIImage(named:"search_btn"), for: .normal)
         listBtn.setBackgroundImage(UIImage(named:"list_btn"), for: .normal)
     
@@ -65,20 +65,23 @@ class MapViewController: UIViewController,BMKMapViewDelegate,BMKLocationServiceD
         
         listBtn.addTarget(self, action: #selector(MapViewController.listShow), for: .touchUpInside)
       
-        let rightListItem = UIBarButtonItem(customView: listBtn)
-         let rightSearchItem = UIBarButtonItem(customView: searchBtn)
-        self.navigationItem.rightBarButtonItems = [rightListItem,rightSearchItem]
-      
-         self.navigationController?.navigationBar.backgroundColor = UIColor.clear
+//        let rightListItem = UIBarButtonItem(customView: listBtn)
+//         let rightSearchItem = UIBarButtonItem(customView: searchBtn)
+//        self.navigationItem.rightBarButtonItems = [rightListItem,rightSearchItem]
+//      
+//         self.navigationController?.navigationBar.backgroundColor = UIColor.clear
+        self.navigationController?.navigationBar.isHidden = true
+        self.view.addSubview(listBtn)
+        self.view.addSubview(searchBtn)
     }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         locationService.delegate = self
         mapView.delegate = nil
         mapView.viewWillDisappear()
-     
-        
-    }
+     self.navigationController?.navigationBar.isHidden = false
+
+        }
     //自定义精度图
     func customLocationAccuracyCircle(){
         let param = BMKLocationViewDisplayParam()
@@ -87,22 +90,26 @@ class MapViewController: UIViewController,BMKMapViewDelegate,BMKLocationServiceD
         param.accuracyCircleFillColor = UIColor(red: 0, green: 1, blue: 0, alpha: 0.3)
         mapView.updateLocationView(with: param)
         }
-    
+    var i = 0
+    var HasLoa = false
     func didUpdateUserHeading(_ userLocation: BMKUserLocation!) {
-
+       
         mapView.updateLocationData(userLocation)
         let coor = userLocation.location.coordinate
         mapView.setCenter(coor, animated: true)
         let circle = BMKCircle(center: coor, radius: 5000)
+      
         mapView.add(circle)
-    }
+      
+        
+        }
     
     /**
      *用户位置更新后，会调用此函数
      *@param userLocation 新的用户位置
      */
+    var j = 0
     func didUpdateBMKUserLocation(userLocation: BMKUserLocation!) {
-
         mapView.updateLocationData(userLocation)
         let coor = userLocation.location.coordinate
         mapView.setCenter(coor, animated: true)

@@ -18,13 +18,16 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var experBtn:UIButton!
     @IBOutlet weak var resetBtn:UIButton!
     override func viewDidLoad() {
+        self.title = "教练删选"
         super.viewDidLoad()
+        cancelBtn.frame = CGRect(x: SCREEN_WIDTH - 50 - 10, y: 10, width: 50, height: 50)
         cancelBtn.addTarget(self, action: #selector(SearchViewController.cancel), for: .touchUpInside)
         anyBtn.tag = 1
         kemuerBtn.tag = 2
         kemusanBtn.tag = 3
         exeBtn.tag = 4
         experBtn.tag = 5
+        
         anyBtn.addTarget(self, action: #selector(SearchViewController.kemu), for: .touchUpInside)
            kemuerBtn.addTarget(self, action: #selector(SearchViewController.kemu), for: .touchUpInside)
            kemusanBtn.addTarget(self, action: #selector(SearchViewController.kemu), for: .touchUpInside)

@@ -106,10 +106,12 @@ class CDTabbarViewController: UITabBarController {
                self.selectedIndex = 1
             }
         }
-        
-        
     }
     func clickBtn(sender:UIButton) {
+        
+        
+        
+        
        self.selectedBtn.isSelected = false;
         sender.isSelected = true
         self.selectedBtn = sender
@@ -117,14 +119,12 @@ class CDTabbarViewController: UITabBarController {
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        print("app")
         self.myView?.isHidden = false
     }
     override func viewWillDisappear(_ animated: Bool) {
        
         super.viewWillDisappear(animated)
-        print("dis")
-        self.myView?.isHidden = true
+             self.myView?.isHidden = true
     }
 
   }

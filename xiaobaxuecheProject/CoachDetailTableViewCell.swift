@@ -15,6 +15,7 @@ class CoachDetailTableViewCell: UITableViewCell {
     @IBOutlet weak var des:UITextView!
     override func awakeFromNib() {
         super.awakeFromNib()
+        cnt.font = UIFont.systemFont(ofSize: 12)
         // Initialization code
     }
 
