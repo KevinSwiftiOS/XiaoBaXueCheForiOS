@@ -15,10 +15,16 @@
 		5B6ECD841DFE8FA500436934 /* CusCityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6ECD831DFE8FA500436934 /* CusCityTableViewCell.swift */; };
 		5B6ECD861DFE8FF900436934 /* Service.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B6ECD851DFE8FF900436934 /* Service.storyboard */; };
 		5B6ECD891DFE9AEA00436934 /* citys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5B6ECD881DFE9AE900436934 /* citys.plist */; };
+		5B773F5A1E06800500BAB4D7 /* WalletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B773F591E06800500BAB4D7 /* WalletViewController.swift */; };
+		5B773F5C1E06804400BAB4D7 /* SystemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B773F5B1E06804400BAB4D7 /* SystemViewController.swift */; };
+		5B773F5E1E0680B800BAB4D7 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B773F5D1E0680B800BAB4D7 /* MessageViewController.swift */; };
 		5B9430F81DFFE87F000C6646 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9430F71DFFE87F000C6646 /* SearchViewController.swift */; };
 		5B9430FB1E001482000C6646 /* CDTabBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9430FA1E001482000C6646 /* CDTabBarButton.swift */; };
 		5B9430FD1E001554000C6646 /* CDTabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9430FC1E001554000C6646 /* CDTabbarViewController.swift */; };
 		5B9431251E0048FE000C6646 /* CusActionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9431241E0048FE000C6646 /* CusActionView.swift */; };
+		5B96C7AF1E0664EC0010AA56 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B96C7AE1E0664EC0010AA56 /* CollectionViewCell.swift */; };
+		5BB7974E1E06761800F8AAD3 /* headerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB7974D1E06761800F8AAD3 /* headerView.swift */; };
+		5BB797501E067DA800F8AAD3 /* DingDanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB7974F1E067DA800F8AAD3 /* DingDanViewController.swift */; };
 		5BBAC0191DFD3DAD00CECD8B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBAC0181DFD3DAD00CECD8B /* AppDelegate.swift */; };
 		5BBAC01E1DFD3DAD00CECD8B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BBAC01C1DFD3DAD00CECD8B /* Main.storyboard */; };
 		5BBAC0201DFD3DAD00CECD8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BBAC01F1DFD3DAD00CECD8B /* Assets.xcassets */; };
@@ -63,10 +69,16 @@
 		5B6ECD831DFE8FA500436934 /* CusCityTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CusCityTableViewCell.swift; sourceTree = "<group>"; };
 		5B6ECD851DFE8FF900436934 /* Service.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Service.storyboard; sourceTree = "<group>"; };
 		5B6ECD881DFE9AE900436934 /* citys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = citys.plist; sourceTree = "<group>"; };
+		5B773F591E06800500BAB4D7 /* WalletViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalletViewController.swift; sourceTree = "<group>"; };
+		5B773F5B1E06804400BAB4D7 /* SystemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SystemViewController.swift; sourceTree = "<group>"; };
+		5B773F5D1E0680B800BAB4D7 /* MessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
 		5B9430F71DFFE87F000C6646 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		5B9430FA1E001482000C6646 /* CDTabBarButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDTabBarButton.swift; sourceTree = "<group>"; };
 		5B9430FC1E001554000C6646 /* CDTabbarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDTabbarViewController.swift; sourceTree = "<group>"; };
 		5B9431241E0048FE000C6646 /* CusActionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CusActionView.swift; sourceTree = "<group>"; };
+		5B96C7AE1E0664EC0010AA56 /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		5BB7974D1E06761800F8AAD3 /* headerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = headerView.swift; sourceTree = "<group>"; };
+		5BB7974F1E067DA800F8AAD3 /* DingDanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DingDanViewController.swift; sourceTree = "<group>"; };
 		5BBAC0151DFD3DAD00CECD8B /* xiaobaxuecheProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = xiaobaxuecheProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BBAC0181DFD3DAD00CECD8B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5BBAC01D1DFD3DAD00CECD8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -177,6 +189,8 @@
 				5B9430FC1E001554000C6646 /* CDTabbarViewController.swift */,
 				5BC7207D1E016D5000B16559 /* SlideViewController.swift */,
 				5B65A0B61E02C11A009E269E /* HalfWaySpringAnimator.swift */,
+				5B96C7AE1E0664EC0010AA56 /* CollectionViewCell.swift */,
+				5BB7974D1E06761800F8AAD3 /* headerView.swift */,
 			);
 			name = Main;
 			sourceTree = "<group>";
@@ -405,6 +419,10 @@
 			isa = PBXGroup;
 			children = (
 				5BC7205D1E013AB200B16559 /* PersonalViewController.swift */,
+				5BB7974F1E067DA800F8AAD3 /* DingDanViewController.swift */,
+				5B773F591E06800500BAB4D7 /* WalletViewController.swift */,
+				5B773F5B1E06804400BAB4D7 /* SystemViewController.swift */,
+				5B773F5D1E0680B800BAB4D7 /* MessageViewController.swift */,
 			);
 			name = C;
 			sourceTree = "<group>";
@@ -566,11 +584,15 @@
 			files = (
 				5B3FE77F1DFF8EC9001D2EF5 /* CoachListViewController.swift in Sources */,
 				5B9430F81DFFE87F000C6646 /* SearchViewController.swift in Sources */,
+				5BB7974E1E06761800F8AAD3 /* headerView.swift in Sources */,
+				5B96C7AF1E0664EC0010AA56 /* CollectionViewCell.swift in Sources */,
 				5BC720591E01314A00B16559 /* MJRefreshComponent.m in Sources */,
 				5BC7205A1E01314A00B16559 /* MJRefreshFooter.m in Sources */,
 				5BBF8E421DFE6FAA0067CE16 /* WithDrivingViewController.swift in Sources */,
 				5BBF8E441DFE6FBB0067CE16 /* ServiceViewController.swift in Sources */,
+				5BB797501E067DA800F8AAD3 /* DingDanViewController.swift in Sources */,
 				5BBF8E351DFE6EEC0067CE16 /* MapViewController.swift in Sources */,
+				5B773F5E1E0680B800BAB4D7 /* MessageViewController.swift in Sources */,
 				5BC720411E01310800B16559 /* MJRefreshBackGifFooter.m in Sources */,
 				5BBF8E4B1DFE79710067CE16 /* config.swift in Sources */,
 				5BC7204A1E01311500B16559 /* MJRefreshAutoGifFooter.m in Sources */,
@@ -578,6 +600,8 @@
 				5BC720371E0130EF00B16559 /* MJRefreshNormalHeader.m in Sources */,
 				5B9431251E0048FE000C6646 /* CusActionView.swift in Sources */,
 				5B9430FD1E001554000C6646 /* CDTabbarViewController.swift in Sources */,
+				5B773F5C1E06804400BAB4D7 /* SystemViewController.swift in Sources */,
+				5B773F5A1E06800500BAB4D7 /* WalletViewController.swift in Sources */,
 				5B6ECD841DFE8FA500436934 /* CusCityTableViewCell.swift in Sources */,
 				5BBF8E3F1DFE6F8E0067CE16 /* QusViewController.swift in Sources */,
 				5BC720291E0130AC00B16559 /* UIScrollView+MJRefresh.m in Sources */,
@@ -634,6 +658,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -683,6 +708,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
